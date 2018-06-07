@@ -10,10 +10,12 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "server": "pm2 start startscript.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "node-cmd": "^3.0.0",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
