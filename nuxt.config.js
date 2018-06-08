@@ -1,4 +1,4 @@
-// const config = require('./myconfig')
+const myconfig = require('./myconfig')
 
 module.exports = {
   /*
@@ -19,6 +19,22 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
+  ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': {
+      target: myconfig.api,
+      changeOrigin: true,
+      pathRewrite: { '^/api': '/' }
+    }
+  },
+
   /*
   ** Build configuration
   */

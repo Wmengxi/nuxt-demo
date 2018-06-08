@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import api from '~/assets/api'
+import api from '~/service/api'
 
 export default {
   data () {
@@ -23,7 +23,7 @@ export default {
   methods: {
     async sendTemp () {
       try {
-        let res = await api.post('testaaa/test', {
+        let res = await api.post('/api/testaaa/test', {
           'success': true,
           'message': this.temp
         })
@@ -39,12 +39,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import config from '../myconfig'
 
-const ApiHost = config.host + '/index.php/'
+const ApiHost = config.api
 const Http = axios.create({
   baseUrl: ApiHost
 })
@@ -9,7 +9,7 @@ const Http = axios.create({
 const get = (url, data) => {
   return new Promise(async (resolve, reject) => {
     try {
-      let res = await Http.get(ApiHost + url, data)
+      let res = await Http.get(url, data)
       if (res.status === 200) {
         if (res.data.success) {
           resolve(res.data)
@@ -27,7 +27,7 @@ const get = (url, data) => {
 const post = (url, data) => {
   return new Promise(async (resolve, reject) => {
     try {
-      let res = await Http.post(ApiHost + url, data)
+      let res = await Http.post(url, data)
       if (res.status === 200) {
         if (res.data.success) {
           resolve(res.data)
