@@ -16,6 +16,12 @@ html {
   box-sizing: border-box;
 }
 
+
+#__nuxt{
+  width: 1200px;
+  margin: auto;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;

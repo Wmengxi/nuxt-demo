@@ -12,13 +12,21 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '/googlefont/fonts.css' }
     ]
   },
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  plugins: [{
+    src: '~plugins/ElementUI',
+    ssr: true
+  }],
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ],
 
   modules: [
     '@nuxtjs/axios',
@@ -52,6 +60,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['element-ui']
   }
 }
