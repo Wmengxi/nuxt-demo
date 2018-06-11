@@ -142,6 +142,10 @@ export default {
       background: black;
       opacity: 0.3;
     }
+    .nav-item:hover {
+      background: black;
+      opacity: 0.3;
+    }
   }
 }
 </style>

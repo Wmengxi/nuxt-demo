@@ -4,20 +4,25 @@
     <home-pic></home-pic>
     <home-login></home-login>
     <home-adwords>
-      <div slot="ad-title">如果有爱，为什么错过</div>
-      <div slot="ad-words">立即加入会员，缘分就在眼前</div>
+      <div slot="post-title">如果有爱，为什么错过</div>
+      <div slot="post-words">立即加入会员，缘分就在眼前</div>
     </home-adwords>
     <home-member-cards></home-member-cards>
     <home-adpics></home-adpics>
     <home-adwords>
-      <div slot="ad-title">就在你身边，他们相爱啦</div>
-      <div slot="ad-words">立即加入会员，缘分就在眼前</div>
+      <div slot="post-title">就在你身边，他们相爱啦</div>
+      <div slot="post-words">立即加入会员，缘分就在眼前</div>
     </home-adwords>
     <home-love-pics></home-love-pics>
     <home-service></home-service>
     <div class="news-info-container">
       <home-news-info></home-news-info>
       <home-new-member></home-new-member>
+    </div>
+    <home-company-info></home-company-info>
+    <index-bottom></index-bottom>
+    <div class="online-service-container">
+      <home-online-service></home-online-service>
     </div>
     <!-- <div>
       <div class="links">
@@ -39,12 +44,16 @@ import HomeLovePics from './home/components/HomeLovePics'
 import HomeService from './home/components/HomeService'
 import HomeNewsInfo from './home/components/HomeNewsInfo'
 import HomeNewMember from './home/components/HomeNewMember'
+import HomeCompanyInfo from './home/components/HomeCompanyInfo'
+import HomeOnlineService from './home/components/HomeOnlineService'
+import IndexBottom from './home/components/IndexBottom'
 
 export default {
   components: {
     IndexHeader, HomePic, HomeLogin, HomeAdwords,
     HomeAdpics, HomeMemberCards, HomeLovePics,
-    HomeService, HomeNewsInfo, HomeNewMember
+    HomeService, HomeNewsInfo, HomeNewMember,
+    HomeCompanyInfo, HomeOnlineService, IndexBottom
   },
   data () {
     return {
@@ -72,11 +81,15 @@ export default {
   .news-info-container {
     margin: 30px 0;
     width: 90%;
-    height: 360px;
     box-sizing: border-box;
     padding: 5px;
     display: flex;
     flex-direction: row;
+  }
+  .online-service-container {
+    position: absolute;
+    top: 540px;
+    left: 1120px;
   }
 }
 </style>

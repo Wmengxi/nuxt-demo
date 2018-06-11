@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?mht9sf');
-  src:  url('fonts/icomoon.eot?mht9sf#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?mht9sf') format('truetype'),
-    url('fonts/icomoon.woff?mht9sf') format('woff'),
-    url('fonts/icomoon.svg?mht9sf#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?qtvk2x');
+  src:  url('fonts/icomoon.eot?qtvk2x#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?qtvk2x') format('truetype'),
+    url('fonts/icomoon.woff?qtvk2x') format('woff'),
+    url('fonts/icomoon.svg?qtvk2x#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,25 +25,16 @@
 }
 
 .icon-wechat:before {
-  content: "\e900";
-}
-.icon-weixin:before {
-  content: "\e900";
+  content: "\e901";
 }
 .icon-qq:before {
-  content: "\e901";
+  content: "\e900";
 }
 .icon-assignment_ind:before {
   content: "\e85e";
 }
 .icon-phone:before {
   content: "\e0cd";
-}
-.icon-check_box:before {
-  content: "\e834";
-}
-.icon-check_box_outline_blank:before {
-  content: "\e835";
 }
 .icon-mode_edit:before {
   content: "\e254";
@@ -60,8 +51,14 @@
 .icon-keyboard_arrow_right:before {
   content: "\e315";
 }
+.icon-message:before {
+  content: "\e0c9";
+}
 .icon-person:before {
   content: "\e7fd";
+}
+.icon-phone_in_talk:before {
+  content: "\e61d";
 }
 .icon-search:before {
   content: "\e8b6";

@@ -1,5 +1,5 @@
 <template>
-  <div class="home-ad-pics">
+  <div class="home-post-pics">
     <div class="pic-content">
       <div class="activity-info-box">
         <div class="info-label">Activity</div>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="less">
-.home-ad-pics {
+.home-post-pics {
   margin: 30px 0;
   box-sizing: border-box;
   width: 100%;
