@@ -87,9 +87,10 @@ export default {
     flex-direction: row;
   }
   .online-service-container {
+    z-index: 1;
     position: absolute;
     top: 540px;
-    left: 1120px;
+    right: 0;
   }
 }
 </style>

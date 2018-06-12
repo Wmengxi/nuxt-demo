@@ -1,9 +1,6 @@
 <template>
   <div class="index-pic">
-    <img src="https://dummyimage.com/1198x335/333/3ff.jpg&text=pic"
-         style="width: 100%; height: 100%">
   </div>
-
 </template>
 
 <script>
@@ -19,6 +16,10 @@ export default {
   width: 100%;
   height: 380px;
   box-sizing: border-box;
+  background-image: url("https://dummyimage.com/1200x380/333/3ff.jpg&text=pic");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 </style>

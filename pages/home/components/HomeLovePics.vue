@@ -2,13 +2,13 @@
   <div class="home-love-pics">
     <div class="first-row">
       <div class="first-row-pic"
-           style="background: url('https://dummyimage.com/408x200/333/3ff.jpg&text=pic')">
+           style="background-image: url('https://dummyimage.com/408x200/333/3ff.jpg&text=pic')">
         <div class="first-pic-logo">
           <div class="first-logo-words">晒幸福</div>
         </div>
       </div>
       <div class="first-row-pic"
-           style="background: url('https://dummyimage.com/408x200/333/3ff.jpg&text=pic')">
+           style="background-image: url('https://dummyimage.com/408x200/333/3ff.jpg&text=pic')">
         <div class="first-pic-logo">
           <div class="first-logo-words">晒幸福</div>
         </div>
@@ -16,25 +16,25 @@
     </div>
     <div class="second-row">
       <div class="second-row-pic"
-           style="background: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
+           style="background-image: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
         <div class="second-pic-logo">
           <div class="second-logo-words">晒幸福</div>
         </div>
       </div>
       <div class="second-row-pic"
-           style="background: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
+           style="background-image: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
         <div class="second-pic-logo">
           <div class="second-logo-words">晒幸福</div>
         </div>
       </div>
       <div class="second-row-pic"
-           style="background: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
+           style="background-image: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
         <div class="second-pic-logo">
           <div class="second-logo-words">晒幸福</div>
         </div>
       </div>
       <div class="second-row-pic"
-           style="background: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
+           style="background-image: url('https://dummyimage.com/200x150/333/3ff.jpg&text=pic')">
         <div class="second-pic-logo">
           <div class="second-logo-words">晒幸福</div>
         </div>
@@ -70,6 +70,9 @@ export default {
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       .first-pic-logo {
         border-bottom: 30px solid #FF1493;
         border-left: 30px solid transparent;
@@ -96,6 +99,9 @@ export default {
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       .second-pic-logo {
         border-bottom: 25px solid #FF1493;
         border-left: 25px solid transparent;

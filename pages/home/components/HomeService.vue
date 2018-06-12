@@ -75,6 +75,9 @@ export default {
   height: 320px;
   box-sizing: border-box;
   background: url("https://dummyimage.com/1200x320/eee/3ff.jpg&text=pic");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 20px 180px;
   .service-content {
     width: 100%;

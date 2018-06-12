@@ -4,10 +4,18 @@
      <div class="contact-info-box">
        <div class="info-label">联系方式</div>
        <div class="contact-info">
-         <div class="contact-item">热线: 4006-0000-0000</div>
-         <div class="contact-item">QQ: 945195459</div>
-         <div class="contact-item">邮箱: 945195459@qq.com</div>
-         <div class="contact-item">地址: 浙江省宁波市慈溪市古塘街道科技路18号</div>
+         <div class="contact-item">
+           <div class="contact-label">热线 :</div>
+           <div class="contact-content">4006-0000-0000</div></div>
+         <div class="contact-item">
+           <div class="contact-label">Q Q :</div>
+           <div class="contact-content">945195459</div></div>
+         <div class="contact-item">
+           <div class="contact-label">邮箱 :</div>
+           <div class="contact-content">945195459@qq.com</div></div>
+         <div class="contact-item">
+           <div class="contact-label">地址 :</div>
+           <div class="contact-content">浙江省宁波市慈溪市古塘街道科技路18号</div></div>
        </div>
      </div>
      <div class="about-us-box">
@@ -24,21 +32,21 @@
          <div class="attention-item">
            <div class="item-qrcode">
              <img src="https://dummyimage.com/100x100/333/3ff.jpg&text=pic"
-                  style="width: 100%; height: 100%">
+                  class="img-style">
            </div>
            <div class="item-label">微信公众号</div>
          </div>
          <div class="attention-item">
            <div class="item-qrcode">
              <img src="https://dummyimage.com/100x100/333/3ff.jpg&text=pic"
-                  style="width: 100%; height: 100%">
+                  class="img-style">
            </div>
            <div class="item-label">官方微博</div>
          </div>
          <div class="attention-item">
            <div class="item-qrcode">
              <img src="https://dummyimage.com/100x100/333/3ff.jpg&text=pic"
-                  style="width: 100%; height: 100%">
+                  class="img-style">
            </div>
            <div class="item-label">官网手机版</div>
          </div>
@@ -79,7 +87,7 @@ export default {
     }
     .contact-info-box {
       box-sizing: border-box;
-      width: 320px;
+      width: 340px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -94,6 +102,16 @@ export default {
         .contact-item {
           font-size: 14px;
           margin-bottom: 5px;
+          display: flex;
+          .contact-label {
+            margin-right: 8px;
+            width: 40px;
+            text-align: right;
+          }
+          .contact-content {
+            width: 280px;
+            text-align: left;
+          }
         }
       }
     }
@@ -141,9 +159,18 @@ export default {
           .item-qrcode {
             width: 100px;
             height: 100px;
-            border: 1px solid black;
             box-sizing: border-box;
             margin-bottom: 5px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .img-style {
+              max-width: 100%;
+              max-height: 100%;
+            }
           }
           .item-label {
             width: 100%;

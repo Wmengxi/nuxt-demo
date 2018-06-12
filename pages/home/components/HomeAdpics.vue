@@ -19,7 +19,7 @@
       </div>
       <div class="activity-pic-box">
         <img src="https://dummyimage.com/418x246/333/3ff.jpg&text=pic"
-             style="width: 100%; height: 100%">
+             class="img-style">
       </div>
     </div>
  </div>
@@ -39,6 +39,9 @@ export default {
   height: 300px;
   padding: 20px 180px;
   background-image: url("https://dummyimage.com/1200x300/eee/3ff.jpg&text=pic");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   .pic-content {
     width: 100%;
     height: 100%;
@@ -85,8 +88,17 @@ export default {
     .activity-pic-box {
       width: 50%;
       height: 100%;
-      border: 1px solid green;
       box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .img-style {
+        min-width: 100%;
+        min-height: 100%;
+      }
     }
   }
 }

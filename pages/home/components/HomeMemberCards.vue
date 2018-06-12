@@ -7,7 +7,7 @@
            :key="index">
             <div class="card-pic">
               <img :src=member.img
-                style="width: 100%; height: 100%">
+                   class="img-style">
             </div>
             <div class="card-info">
               <div class="member-info-item" style="color: #FF1493;font-size: 16px;">
@@ -129,6 +129,16 @@ export default {
             width: 100px;
             height: 100%;
             box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .img-style {
+              max-width: 100%;
+              max-height: 100%;
+            }
           }
           .card-info {
             display: flex;

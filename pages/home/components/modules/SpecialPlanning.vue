@@ -29,11 +29,10 @@
         </div>
         <div class="special-planning-body">
           <img src="https://dummyimage.com/540x300/eee/3ff.jpg&text=logo"
-             style="width: 100%;height: 100%">
+                class="img-style">
         </div>
       </div>
     </div>
-
 </template>
 
 <script>
@@ -81,7 +80,7 @@ export default {
       display: flex;
       .header-item {
         width: 180px;
-        height: 100%;
+        height: 52px;
         box-sizing: border-box;
         background-color: white;
         display: flex;
@@ -91,8 +90,8 @@ export default {
         cursor: pointer;
         padding: 3px;
         .header-word {
-          width: 100%;
-          height: 100%;
+          width: 174px;
+          max-height: 46px;
           box-sizing: border-box;
           display: flex;
           align-items: center;
@@ -120,9 +119,20 @@ export default {
       }
     }
     .special-planning-body {
+      margin-top: -8px;
       width: 540px;
       height: 300px;
       box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .img-style {
+        min-width: 100%;
+        min-height: 100%;
+      }
     }
   }
 }

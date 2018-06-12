@@ -5,12 +5,14 @@
      <div class="news-info-tab">
        <div class="tab-item" @click="getType('companyNews')"
             :style="{ border: type === 'companyNews' ? arrowShow: 'none'}">
-          <div class="tab-company-news">公司新闻</div>
+          <div class="tab-company-news"
+            :style="{ color: type === 'companyNews' ? activeColor : ''}">公司新闻</div>
           <div class="tab-arrow" :style="{ display: type === 'companyNews' ? arrowShow : 'none'}"></div>
        </div>
        <div class="tab-item" @click="getType('tradeInfo')"
             :style="{ border: type === 'tradeInfo' ? arrowShow : 'none'}">
-        <div class="tab-trade-info">行业资讯</div>
+        <div class="tab-trade-info"
+            :style="{ color: type === 'tradeInfo' ? activeColor : ''}">行业资讯</div>
         <div class="tab-arrow" :style="{ display: type === 'tradeInfo' ? arrowShow : 'none'}"></div>
        </div>
      </div>
@@ -21,7 +23,7 @@
             :key="index">
          <div class="info-pic">
            <img :src=info.img
-                style="width: 100%; height: 100%">
+                class="img-style">
          </div>
          <div class="info-words">
            <div class="info-title">
@@ -42,6 +44,7 @@ export default {
   data () {
     return {
       arrowShow: '',
+      activeColor: '#FF1493',
       type: 'companyNews',
       infoList: [{
         img: 'https://dummyimage.com/150x90/eee/3ff.jpg&text=pic',
@@ -107,7 +110,7 @@ export default {
         .tab-company-news {
           padding: 5px 0;
           font-size: 16px;
-          color: #FF1493;
+          color: black;
           cursor: pointer;
         }
         .tab-trade-info {
@@ -152,6 +155,16 @@ export default {
           height: 100px;
           box-sizing: border-box;
           margin-right: 10px;
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .img-style {
+            min-width: 100%;
+            min-height: 100%;
+          }
         }
         .info-words {
           box-sizing: border-box;
@@ -168,6 +181,11 @@ export default {
             font-size: 14px;
             text-align: left;
             color: grey;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
       }

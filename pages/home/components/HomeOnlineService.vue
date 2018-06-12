@@ -24,7 +24,7 @@
         <div class="wechat-label">关注微信</div>
         <div class="wechat-qrcode">
           <img src="https://dummyimage.com/80x80/333/3ff.jpg&text=pic"
-             style="width: 100%; height: 100%">
+               class="img-style">
         </div>
       </div>
     </div>
@@ -59,6 +59,7 @@ export default {
     justify-content: center;
   }
   .online-service-box {
+    background-color: white;
     width: 120px;
     height: 100%;
     border: 2px solid #FF1493;
@@ -132,8 +133,17 @@ export default {
       .wechat-qrcode {
         width: 80px;
         height: 80px;
-        border: 1px solid black;
         box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .img-style {
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
     }
   }
