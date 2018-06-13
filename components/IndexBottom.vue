@@ -21,7 +21,7 @@ export default {
 .index-bottom {
   width: 100%;
   height: 40px;
-  background-color: #ff0066;
+  background-color: #F1356F;
   .bottom-box {
     margin: auto;
     width: 90%;

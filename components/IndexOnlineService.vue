@@ -9,11 +9,11 @@
         <div class="qq-label">QQ咨询</div>
         <div class="qq-item" style="border-bottom: 1px solid lightgrey">
           <span class="icon-qq qq-icon"></span>
-          <span>沈老师</span>
+          <span style="color: rgb(132, 218, 240);">沈老师</span>
         </div>
         <div class="qq-item">
           <span class="icon-qq qq-icon"></span>
-          <span>马老师</span>
+          <span style="color: rgb(132, 218, 240);">马老师</span>
         </div>
       </div>
       <div class="tel-box">
@@ -40,7 +40,7 @@ export default {
 
 <style lang="less">
 .home-online-service {
-  width: 150px;
+  width: 160px;
   height: 300px;
   box-sizing: border-box;
   display: flex;
@@ -49,7 +49,7 @@ export default {
     margin-top: 20px;
     width: 30px;
     height: 120px;
-    background-color: #FF1493;
+    background-color: #F1356F;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     color: white;
@@ -60,9 +60,9 @@ export default {
   }
   .online-service-box {
     background-color: white;
-    width: 120px;
+    width: 130px;
     height: 100%;
-    border: 2px solid #FF1493;
+    border: 2px solid #F1356F;
     border-radius: 5px;
     box-sizing: border-box;
     display: flex;
@@ -72,7 +72,7 @@ export default {
     .qq-box {
       width: 100%;
       height: 125px;
-      border-bottom: 2px solid #FF1493;
+      border-bottom: 2px solid #F1356F;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -81,7 +81,7 @@ export default {
       .qq-label {
         width: 100%;
         height: 30px;
-        color: #FF1493;
+        color: #EF4279;
         border-bottom: 1px solid #FFCCCC;
         margin-bottom: 3px;
       }
@@ -109,15 +109,15 @@ export default {
       justify-content: center;
       font-size: 14px;
       .phone-icon {
-        color: #FF1493;
+        color: #F1356F;
         font-size: 20px;
-        margin-right: 2px;
+        margin-right: 5px;
       }
     }
     .wechat-box {
       width: 100%;
       height: 125px;
-      border-top: 2px solid #FF1493;
+      border-top: 2px solid #F1356F;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -126,7 +126,7 @@ export default {
       .wechat-label {
         width: 100%;
         height: 30px;
-        color: #FF1493;
+        color: #EF4279;
         border-bottom: 1px solid #FFCCCC;
         margin-bottom: 5px;
       }

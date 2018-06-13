@@ -10,7 +10,7 @@
                    class="img-style">
             </div>
             <div class="card-info">
-              <div class="member-info-item" style="color: #FF1493;font-size: 16px;">
+              <div class="member-info-item" style="color: #F02D73;font-size: 16px;">
                 {{member.name}}
               </div>
               <div class="member-info-item">年龄: {{member.age}}</div>
@@ -156,7 +156,7 @@ export default {
               height: 30px;
               margin-top: 15px;
               .btn {
-                background-color: #FF1493;
+                background-color: #FD6F9F;
                 color: white;
                 line-height: 30px;
                 font-size: 14px;
@@ -172,7 +172,7 @@ export default {
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: #FF1493;
+        background-color: #FE6D9F;
       }
     }
   }

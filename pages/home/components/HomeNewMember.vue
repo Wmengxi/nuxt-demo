@@ -68,7 +68,7 @@ export default {
   padding: 5px;
   .member-label {
     padding: 5px 0;
-    border-bottom: 1px solid #FF1493;
+    border-bottom: 1px solid #FF70A2;
     font-size: 18px;
     font-weight: bold;
     box-sizing: border-box;
@@ -90,7 +90,7 @@ export default {
       align-items: center;
       .item-icon {
         font-size: 24px;
-        color: #FF1493;
+        color: #FF70A2;
       }
       .item-date {
         width: 72px;
@@ -101,7 +101,6 @@ export default {
       .item-content {
         box-sizing: border-box;
         width: 325px;
-        height: 24px;
         text-align: left;
         font-size: 14px;
         white-space: nowrap;

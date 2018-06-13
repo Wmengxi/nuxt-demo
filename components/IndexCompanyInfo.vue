@@ -66,7 +66,7 @@ export default {
 .home-company-info {
   width: 100%;
   height: 220px;
-  border-top: 2px solid #FF1493;
+  border-top: 2px solid #F3487E;
   box-sizing: border-box;
   padding: 10px 0 0 5px;
   background-color: #F5F5F5;
@@ -80,7 +80,7 @@ export default {
     justify-content: space-between;
     .info-label {
       text-align: left;
-      border-left: 2px solid #FF1493;
+      border-left: 2px solid #F3487E;
       box-sizing: border-box;
       margin-bottom: 20px;
       padding: 0 0 0 5px;

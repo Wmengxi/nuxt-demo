@@ -4,11 +4,11 @@
       <div class="login-register-header">
         <div class="header-item" @click="getType('login')"
               :style="{ border: type === 'login' ? '' : unShow}">
-          <div class="header-word">快捷登录</div>
+          <div :class="[ 'header-word', type === 'login' ? 'word-style' : '']">快捷登录</div>
         </div>
         <div class="header-item" @click="getType('register')"
               :style="{ border: type === 'register' ? '' : unShow}">
-          <div class="header-word" style="border: none">会员注册</div>
+          <div :class="[ 'header-word', type === 'register' ? 'word-style' : '']">会员注册</div>
         </div>
       </div>
       <div class="login-body" v-if="type === 'login'">
@@ -26,7 +26,7 @@
                   @click="isFreedom = !isFreedom"></span>
             <span class="icon-check_box icon-size" v-else
                   @click="isFreedom = !isFreedom"></span>
-            <span style="font-size: 14px;">一个月内免登</span>
+            <span style="font-size: 14px;">一个月免登</span>
           </div>
           <div class="other-login">
             <div class="qq">
@@ -43,7 +43,7 @@
           <div class="login-btn">立即登录</div>
         </div>
         <div class="registered-num">
-          最新登记注册会员<span style="color: #FF1493">220145</span>人
+          最新登记注册会员<span style="color: #FD6F9F">220145</span>人
         </div>
       </div>
       <div class="register-body" v-else>
@@ -91,7 +91,7 @@ export default {
       height: 60px;
       display: flex;
       .header-item {
-        border-top: 3px solid #FF1493;
+        border-top: 3px solid #FD6F9F;
         width: 50%;
         height: 100%;
         box-sizing: border-box;
@@ -108,6 +108,12 @@ export default {
           width: 100%;
           height: 100%;
           border-right: 1px solid lightgray;
+          font-size: 16px;
+          color: grey;
+        }
+        .word-style {
+          color: black;
+          font-weight: bold;
         }
       }
     }
@@ -142,8 +148,8 @@ export default {
           align-items: center;
           justify-content: center;
           font-size: 14px;
-          background-color: #ff9999;
-          color: #ff0099;
+          background-color: #FEBDD3;
+          color: #FE75A3;
           cursor: pointer;
         }
       }
@@ -210,7 +216,7 @@ export default {
         .login-btn {
           width: 100%;
           height: 100%;
-          background-color: #FF1493;
+          background-color: #FD6F9F;
           color: white;
           line-height: 40px;
         }

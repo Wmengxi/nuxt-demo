@@ -62,7 +62,7 @@ export default {
       }
       .info-title {
         font-size: 20px;
-        color: #FF1493;
+        color: #D3016F;
         font-weight: bold;
         margin-bottom: 20px;
       }

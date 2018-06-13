@@ -87,7 +87,7 @@ export default {
     align-items: flex-end;
     .news-info-label {
       padding: 5px 0;
-      border-bottom: 1px solid #FF1493;
+      border-bottom: 1px solid #FF70A2;
       font-size: 18px;
       font-weight: bold;
       box-sizing: border-box;
@@ -99,7 +99,7 @@ export default {
       align-items: center;
       justify-content: flex-start;
       .tab-item {
-        border-bottom: 1px solid #FF1493;
+        border-bottom: 1px solid #FF70A2;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -126,7 +126,7 @@ export default {
           height:0;
           border-left:4px solid transparent;
           border-right:4px solid transparent;
-          border-bottom:4px solid #FF1493;
+          border-bottom:4px solid #FF70A2;
         }
       }
     }

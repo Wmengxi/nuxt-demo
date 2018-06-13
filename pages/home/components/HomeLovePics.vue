@@ -74,7 +74,7 @@ export default {
       background-repeat: no-repeat;
       background-size: cover;
       .first-pic-logo {
-        border-bottom: 30px solid #FF1493;
+        border-bottom: 30px solid #FD6F9F;
         border-left: 30px solid transparent;
         width: 120px;
         cursor: pointer;
@@ -103,7 +103,7 @@ export default {
       background-repeat: no-repeat;
       background-size: cover;
       .second-pic-logo {
-        border-bottom: 25px solid #FF1493;
+        border-bottom: 25px solid #FD6F9F;
         border-left: 25px solid transparent;
         width: 90px;
         cursor: pointer;

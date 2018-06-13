@@ -119,7 +119,7 @@ export default {
           width: 55px;
           height: 55px;
           border-radius: 50%;
-          background-color: #FF1493;
+          background-color: #FD6F9F;
           margin-bottom: 10px;
           .icon-style {
             font-size: 28px;
@@ -132,7 +132,7 @@ export default {
         }
         .icon-arrow-style {
           font-size: 40px;
-          color: red;
+          color: #D32F61;
         }
       }
     }

@@ -40,8 +40,8 @@ export default {
   data () {
     return {
       activeTab: 'first',
-      activeBg: '#FF1493',
-      activeColor: 'black',
+      activeBg: '#FD6F9F',
+      activeColor: 'white',
       arrowShow: '',
       planningList: [{
         title: '【4周年特别策划】单身男神女神云集 万元奖品等你来拿'
@@ -114,7 +114,7 @@ export default {
           height:0;
           border-left:8px solid transparent;
           border-right:8px solid transparent;
-          border-top:8px solid #FF1493;
+          border-top:8px solid #FD6F9F;
         }
       }
     }
