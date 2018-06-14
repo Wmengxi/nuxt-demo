@@ -1,12 +1,12 @@
 <template>
   <section class="container">
-    <div class="us-header-nav">
+    <div class="news-header-nav">
       <index-header></index-header>
       <index-navbar></index-navbar>
     </div>
     <page-pic></page-pic>
-    <div class="us-content-container">
-      <about-content></about-content>
+    <div class="news-content-container">
+      <news-content></news-content>
     </div>
     <index-company-info></index-company-info>
     <index-bottom></index-bottom>
@@ -18,17 +18,17 @@
 </template>
 
 <script>
-const IndexHeader = r => require.ensure([], () => r(require('@/components/IndexHeader')), 'aboutus')
-const IndexNavbar = r => require.ensure([], () => r(require('@/components/IndexNavbar')), 'aboutus')
-const PagePic = r => require.ensure([], () => r(require('@/components/PagePic')), 'aboutus')
-const AboutContent = r => require.ensure([], () => r(require('./components/AboutContent')), 'aboutus')
+const IndexHeader = r => require.ensure([], () => r(require('@/components/IndexHeader')), 'news')
+const IndexNavbar = r => require.ensure([], () => r(require('@/components/IndexNavbar')), 'news')
+const PagePic = r => require.ensure([], () => r(require('@/components/PagePic')), 'news')
+const NewsContent = r => require.ensure([], () => r(require('./components/NewsContent')), 'news')
 
-const IndexCompanyInfo = r => require.ensure([], () => r(require('@/components/IndexCompanyInfo')), 'aboutus')
-const IndexOnlineService = r => require.ensure([], () => r(require('@/components/IndexOnlineService')), 'aboutus')
+const IndexCompanyInfo = r => require.ensure([], () => r(require('@/components/IndexCompanyInfo')), 'news')
+const IndexOnlineService = r => require.ensure([], () => r(require('@/components/IndexOnlineService')), 'news')
 const IndexBottom = r => require.ensure([], () => r(require('@/components/IndexBottom')), 'aboutus')
 export default {
   components: {
-    IndexHeader, IndexNavbar, PagePic, AboutContent,
+    IndexHeader, IndexNavbar, PagePic, NewsContent,
     IndexCompanyInfo, IndexOnlineService, IndexBottom
   }
 
@@ -45,7 +45,7 @@ export default {
   text-align: center;
   box-sizing: border-box;
   padding: 0 0 10px 0;
-  .us-header-nav {
+  .news-header-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,9 +54,9 @@ export default {
     box-sizing: border-box;
     margin-bottom: 1px;
   }
-  .us-content-container {
+  .news-content-container {
     width: 100%;
-    height: 680px;
+    // height: 680px;
     box-sizing: border-box;
   }
   .online-service-container {

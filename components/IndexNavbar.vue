@@ -1,8 +1,8 @@
 <template>
   <div class="nav-box">
-    <div class="nav-item">网站首页</div>
-    <div class="nav-item">关于我们</div>
-    <div class="nav-item">新闻咨询</div>
+    <div :class="['nav-item', isCurrent('home') ? 'selected' : '']" @click="navTo('home')">网站首页</div>
+    <div :class="['nav-item', isCurrent('aboutus') ? 'selected' : '']" @click="navTo('aboutus')">关于我们</div>
+    <div :class="['nav-item', isCurrent('news') ? 'selected' : '']" @click="navTo('news')">新闻资讯</div>
     <div class="nav-item">服务介绍</div>
     <div class="nav-item">晒幸福</div>
     <div class="nav-item">寻找对象</div>
@@ -17,6 +17,15 @@
 
 <script>
 export default {
+  methods: {
+    navTo (destName) {
+      this.$router.push({name: destName})
+    },
+    isCurrent(pageName) {
+      let currentPage = this.$route.name
+      return currentPage === pageName ? true : false
+    }
+  }
 
 }
 </script>
@@ -54,6 +63,9 @@ export default {
     background-color: #c20450;
   }
   .nav-item:hover {
+    background-color: #c20450;
+  }
+  .selected {
     background-color: #c20450;
   }
 }
