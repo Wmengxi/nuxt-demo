@@ -6,7 +6,7 @@
     </div>
     <page-pic></page-pic>
     <div class="news-content-container">
-      <news-content></news-content>
+      <info-content></info-content>
     </div>
     <index-company-info></index-company-info>
     <index-bottom></index-bottom>
@@ -21,14 +21,14 @@
 const IndexHeader = r => require.ensure([], () => r(require('@/components/IndexHeader')), 'news')
 const IndexNavbar = r => require.ensure([], () => r(require('@/components/IndexNavbar')), 'news')
 const PagePic = r => require.ensure([], () => r(require('@/components/PagePic')), 'news')
-const NewsContent = r => require.ensure([], () => r(require('./components/NewsContent')), 'news')
+const InfoContent = r => require.ensure([], () => r(require('./_InfoContent')), 'news')
 
 const IndexCompanyInfo = r => require.ensure([], () => r(require('@/components/IndexCompanyInfo')), 'news')
 const IndexOnlineService = r => require.ensure([], () => r(require('@/components/IndexOnlineService')), 'news')
 const IndexBottom = r => require.ensure([], () => r(require('@/components/IndexBottom')), 'aboutus')
 export default {
   components: {
-    IndexHeader, IndexNavbar, PagePic, NewsContent,
+    IndexHeader, IndexNavbar, PagePic, InfoContent,
     IndexCompanyInfo, IndexOnlineService, IndexBottom
   }
 

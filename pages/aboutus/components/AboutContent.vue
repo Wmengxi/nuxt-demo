@@ -1,20 +1,18 @@
 <template>
   <div class="about-content-box">
     <div class="content-link-box">
-      <sidebar-link></sidebar-link>
+      <about-us></about-us>
+      <new-news></new-news>
+      <contact-us></contact-us>
     </div>
     <div class="content-info-box">
       <div class="inner-item-box">
-        <div class="inner-item-nav">
-          <div class="item-label">
-            <span class="icon-navigate_next item-icon"></span>
-            <span>公司介绍</span>
-          </div>
-          <div class="item-nav">
-            <span>首页</span>>
-            <span>关于我们</span>>
-            <span>公司介绍</span></div>
-        </div>
+        <content-nav>
+          <span slot="rightTitle">公司介绍</span>
+          <span slot="leftFirstTitle">首页></span>
+          <span slot="leftSecondTitle">关于我们></span>
+          <span slot="leftThirdTitle">公司介绍</span>
+        </content-nav>
         <div class="inner-item-content">
           {{contentInfo}}
         </div>
@@ -24,9 +22,14 @@
 </template>
 
 <script>
-import SidebarLink from '@/components/SideBarLink'
+
+const AboutUs = r => require.ensure([], () => r(require('@/frame/sidebar/AboutUs')), 'aboutus')
+const NewNews = r => require.ensure([], () => r(require('@/frame/sidebar/NewNews')), 'aboutus')
+const ContactUs = r => require.ensure([], () => r(require('@/frame/sidebar/ContactUs')), 'aboutus')
+const ContentNav = r => require.ensure([], () => r(require('@/frame/contentnav/ContentNav')), 'aboutus')
+
 export default {
-  components: { SidebarLink },
+  components: { AboutUs, NewNews, ContactUs, ContentNav },
   data () {
     return {
       contentInfo: '相亲相爱网是一个严肃认真的婚恋相亲网站，为具有中华人民共和国国籍的单身成年人士提供婚恋服务'

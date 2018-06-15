@@ -1,20 +1,18 @@
 <template>
   <div class="news-content-box">
     <div class="content-link-box">
-      <sidebar-link></sidebar-link>
+      <news-info></news-info>
+      <new-news></new-news>
+      <contact-us></contact-us>
     </div>
     <div class="content-info-box">
       <div class="inner-item-box">
-        <div class="inner-item-nav">
-          <div class="item-label">
-            <span class="icon-navigate_next item-icon"></span>
-            <span>通知公告</span>
-          </div>
-          <div class="item-nav">
-            <span>首页</span>>
-            <span>新闻资讯</span>>
-            <span>通知公告</span></div>
-        </div>
+        <content-nav>
+          <span slot="rightTitle">通知公告</span>
+          <span slot="leftFirstTitle">首页></span>
+          <span slot="leftSecondTitle">新闻资讯></span>
+          <span slot="leftThirdTitle">通知公告</span>
+        </content-nav>
         <div class="inner-item-content">
           <div class="news-item-box" v-for="(newsItem, index) in newsList"
                :key="index">
@@ -30,7 +28,7 @@
               <div class="news-words-box">
                 <div class="news-words">{{newsItem.newsContent}}</div>
                 <div class="news-more-btn">
-                  <div class="more-btn">了解详情</div>
+                  <div class="more-btn" @click="navTo(index)">了解详情</div>
                 </div>
               </div>
             </div>
@@ -45,11 +43,14 @@
 </template>
 
 <script>
-import SidebarLink from '@/components/SideBarLink'
-import PagePagination from '@/components/PagePagination'
+const NewsInfo = r => require.ensure([], () => r(require('@/frame/sidebar/NewsInfo')), 'news')
+const NewNews = r => require.ensure([], () => r(require('@/frame/sidebar/NewNews')), 'news')
+const ContactUs = r => require.ensure([], () => r(require('@/frame/sidebar/ContactUs')), 'news')
+const ContentNav = r => require.ensure([], () => r(require('@/frame/contentnav/ContentNav')), 'news')
+const PagePagination = r => require.ensure([], () => r(require('@/components/PagePagination')), 'news')
 
 export default {
-  components: { SidebarLink, PagePagination },
+  components: { NewsInfo, NewNews, ContactUs, ContentNav, PagePagination },
   data () {
     return {
       newsList: [{
@@ -78,6 +79,11 @@ export default {
           newsPic: 'https://dummyimage.com/230x160/eee/3ff.jpg&text=pic',
           newsContent: '海外婚礼避免了繁冗的婚礼筹备，又开阔了异域视野，正成为年轻人喜结连理的一种新时尚。为什么越来越多的人选择海外婚礼？我们为什么要办海外婚礼？...'
         }]
+    }
+  },
+  methods: {
+    navTo (index) {
+      this.$router.push({name: 'news-newsInfo', params: {'id': index}})
     }
   }
 
@@ -113,31 +119,6 @@ export default {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      .inner-item-nav {
-        width: 100%;
-        height: 40px;
-        border-bottom: 1px solid #D76083;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        margin-bottom: 8px;
-        .item-label {
-          display: flex;
-          align-items: center;
-          font-weight: bold;
-          .item-icon {
-            color: #D76083;
-            font-size: 24px;
-          }
-        }
-        .item-nav {
-          flex: 1;
-          display: flex;
-          justify-content: flex-end;
-          font-size: 14px;
-        }
-      }
       .inner-item-content {
         width: 100%;
         box-sizing: border-box;
