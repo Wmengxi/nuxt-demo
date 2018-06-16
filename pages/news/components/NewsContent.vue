@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     navTo (index) {
-      this.$router.push({name: 'news-newsInfo', params: {'id': index}})
+      this.$router.push({name: 'news-newsinfo', params: {'id': index}})
     }
   }
 

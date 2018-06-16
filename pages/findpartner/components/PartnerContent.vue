@@ -12,36 +12,48 @@
           <span slot="leftSecondTitle">寻找对象></span>
         </content-nav>
         <div class="inner-item-content">
-          <div class="self-info-box">
-            <div class="self-big-pic"></div>
-            <div class="self-content-box">
-              <div class="self-name-row">
-                <div class="self-name">老爷</div>
-                <div class="focus-btn-box">
-                  <div class="btn">关 注</div>
-                </div>
-              </div>
-              <div class="self-age-row">
-                <span>31岁 ,</span>
-                <span>男 ,</span>
-                <span>宁波杭州湾</span>
-              </div>
-              <div class="self-detail-info">
-                <div class="detail-item"></div>
-                <div class="detail-item"></div>
-                <div class="detail-item"></div>
-                <div class="detail-item"></div>
-                <div class="detail-item"></div>
-              </div>
-              <div class="self-slide-pic"></div>
+          <div class="search-box">
+            <div class="search-input-box">
+              <input type="text" class="search-style">
+              <div class="search-btn">搜&nbsp;&nbsp;索</div>
+            </div>
+            <div class="search-word-box">
+              <div class="word-label">热门搜索词&nbsp;&nbsp;: </div>
+              <span class="word-style">苗条</span>
+              <span class="word-style">幽默</span>
+              <span class="word-style">清纯</span>
+              <span class="word-style">可爱</span>
+              <span class="word-style">时尚</span>
+              <span class="word-style">睿智</span>
             </div>
           </div>
-          <div class="inner-monologue-box">内心独白</div>
-          <div class="mate-requirements-box">择偶要求</div>
-          <div class="lifestyle-box">生活方式</div>
-          <div class="economic-strength-box">经济实力</div>
-          <div class="work-study-box">工作学习</div>
-          <div class="marriage-concept-box">婚姻观念</div>
+          <div class="tag-box">
+            <div class="hot-tag-box">
+              <div class="row-item">
+                <div class="row-label">热门标签&nbsp;:</div>
+                <div class="row-tags">
+                  <div class="tag-item">高级白领</div>
+                  <div class="tag-item">教师</div>
+                  <div class="tag-item">医务工作者</div>
+                  <div class="tag-item">高级白领</div>
+                  <div class="tag-item">教师</div>
+                  <div class="tag-item">医务工作者</div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div class="row-label">您已选择&nbsp;:</div>
+                <div class="row-tags">
+                  <el-tag v-for="(tag, index) in chosenTagList"
+                          :key="index"
+                          closable
+                          @close="handleClose(tag)">
+                    {{tag}}
+                  </el-tag>
+                </div>
+              </div>
+            </div>
+            <div class="more-tags"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -58,7 +70,12 @@ export default {
   components: {  NewNews, ContactUs, ContentNav, PagePagination },
   data () {
     return {
-
+      chosenTagList: ['女', '杭州湾', '20-28岁', '有照片']
+    }
+  },
+  methods: {
+    handleClose (tag) {
+      this.chosenTagList.splice(this.chosenTagList.indexOf(tag), 1)
     }
   }
 }
@@ -95,131 +112,116 @@ export default {
       flex-direction: column;
       .inner-item-content {
         width: 100%;
+        height: 500px;
+        border: 1px solid black;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        padding: 20px 5px;
-        .self-info-box {
+        padding: 5px;
+        .search-box {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          box-sizing: border-box;
+          padding: 5px 40px;
+          .search-input-box {
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .search-style {
+              width: 380px;
+              height: 30px;
+              border: 3px solid #F1356F;
+              box-sizing: border-box;
+              padding: 0 10px;
+              outline: none;
+              border-top-left-radius: 3px;
+              border-bottom-left-radius: 3px;
+            }
+            .search-btn {
+              width: 90px;
+              height: 30px;
+              background-color: #F1356F;
+              color: white;
+              line-height: 30px;
+              cursor: pointer;
+              border-top-right-radius: 3px;
+              border-bottom-right-radius: 3px;
+            }
+          }
+          .search-word-box {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-content: center;
+            padding: 0 10px;
+            .word-label {
+              font-size: 14px;
+              font-weight: bold;
+            }
+            .word-style {
+              font-size: 14px;
+              margin: 0 5px;
+            }
+          }
+        }
+        .tag-box {
           width: 100%;
           box-sizing: border-box;
-          margin-bottom: 20px;
           display: flex;
-          align-items: center;
-          .self-big-pic {
-            width: 200px;
-            height: 370px;
-            border: 1px solid black;
-            box-sizing: border-box;
-            align-self: flex-end;
-            margin-right: 10px;
-            margin-bottom: 5px;
-          }
-          .self-content-box {
-            padding: 5px;
-            width: 360px;
+          flex-direction: column;
+          border: 1px solid lightgrey;
+          border-top: none;
+          .hot-tag-box {
+            width: 100%;
+            border-top: 3px solid #F33973;
+            background-color: #F2F2F2;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            .self-name-row {
+            padding: 5px;
+            .row-item {
               width: 100%;
-              height: 30px;
               box-sizing: border-box;
               display: flex;
               align-items: center;
-              margin-bottom: 5px;
-              .self-name {
-                width: 90px;
+              .row-label {
+                width: 70px;
+                font-size: 14px;
                 font-weight: bold;
-                text-align: left;
               }
-              .focus-btn-box {
-                flex: 1;
-                box-sizing: border-box;
+              .row-tags {
                 display: flex;
-                justify-content: flex-end;
-                .btn {
-                  width: 80px;
+                width: 500px;
+                box-sizing: border-box;
+                flex-wrap: wrap;
+                .tag-item {
+                  border: 1px solid #F33973;
+                  border-radius: 10px;
+                  font-size: 14px;
+                  margin: 5px;
+                  padding: 3px;
+                  color: #F33973;
+                  background-color: white;
+                }
+                .el-tag {
                   height: 30px;
-                  background-color: #F1356F;
-                  box-sizing: border-box;
-                  border-radius: 3px;
-                  color: white;
-                  line-height: 30px;
-                  cursor: pointer;
+                  margin: 5px;
                 }
               }
-            }
-            .self-age-row {
-              width: 100%;
-              height: 30px;
-              box-sizing: border-box;
-              display: flex;
-              align-items: center;
-              margin-bottom: 10px;
-            }
-            .self-detail-info {
-              width: 100%;
-              box-sizing: border-box;
-              margin-bottom: 10px;
-              .detail-item {
-                width: 100%;
-                height: 30px;
-                border: 1px solid red;
-                box-sizing: border-box;
-                font-size: 14px;
-                margin-bottom: 5px;
-                display: flex;
-              }
-            }
-            .self-slide-pic {
-              width: 100%;
-              height: 120px;
-              border: 1px solid black;
-              box-sizing: border-box;
+
             }
           }
-        }
-        .inner-monologue-box {
-          width: 100%;
-          height: 120px;
-          border: 1px solid lightgrey;
-          box-sizing: border-box;
-          margin-bottom: 20px;
-        }
-        .mate-requirements-box {
-          width: 100%;
-          height: 180px;
-          border: 1px solid lightgrey;
-          box-sizing: border-box;
-          margin-bottom: 20px;
-        }
-        .lifestyle-box {
-          width: 100%;
-          height: 180px;
-          border: 1px solid lightgrey;
-          box-sizing: border-box;
-          margin-bottom: 20px;
-        }
-        .economic-strength-box {
-          width: 100%;
-          height: 160px;
-          border: 1px solid lightgrey;
-          box-sizing: border-box;
-          margin-bottom: 20px;
-        }
-        .work-study-box {
-          width: 100%;
-          height: 170px;
-          border: 1px solid lightgrey;
-          box-sizing: border-box;
-          margin-bottom: 20px;
-        }
-        .marriage-concept-box {
-          width: 100%;
-          height: 320px;
-          border: 1px solid lightgrey;
-          box-sizing: border-box;
-          margin-bottom: 20px;
+          .more-tags {
+            width: 100%;
+            height: 120px;
+            border-top: 1px solid lightgrey;
+            box-sizing: border-box;
+          }
         }
       }
     }
