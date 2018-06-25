@@ -28,7 +28,7 @@
               <div class="news-words-box">
                 <div class="news-words">{{newsItem.newsContent}}</div>
                 <div class="news-more-btn">
-                  <div class="more-btn" @click="navTo(index)">了解详情</div>
+                  <div class="more-btn" @click="getInfo(index)">了解详情</div>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default {
     }
   },
   methods: {
-    navTo (index) {
+    getInfo (index) {
       this.$router.push({name: 'news-newsinfo', params: {'id': index}})
     }
   }
@@ -108,7 +108,7 @@ export default {
     padding: 10px 0 0 0;
   }
   .content-info-box {
-    width: 600px;
+    width: 650px;
     height: 100%;
     box-sizing: border-box;
     padding: 5px;
@@ -149,6 +149,7 @@ export default {
               font-size: 18px;
             }
             .title-date {
+              margin-right: 5px;
               flex: 1;
               text-align: right;
               font-size: 14px;
@@ -179,7 +180,7 @@ export default {
             }
             .news-words-box {
               font-size: 14px;
-              width: 300px;
+              width: 350px;
               height: 160px;
               box-sizing: border-box;
               display: flex;
